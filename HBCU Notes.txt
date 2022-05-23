@@ -1,0 +1,125 @@
+Week2:
+Array~ [Data-types]
+Description:
+An array is a collection of variable that are accessed with an index number.
+Declaring Array"
+int myInt[4];
+int myPin[] = {1,2,3};
+int mySensVals[5] = {2, 4, 6, 8};
+char msg[6] = "hello";
+Hence: 
+//Assigning a value: myArr[0] = 5;
+//Retrieve a value from an array: x = myArr[4];
+
+Binary Numbers:
+Binary which has to do with Os and 1s i.e base two digits. In arduino IDE, representing numbers in binary or hexadecimal notion often comes in handy. For example:
+//ATmega328's registers are eight bits
+byte myNum = B00001101 i.2 equivalent to number 13
+
+While for Hex.
+byte = myNum = 0xFF i.e equiv. of 255
+
+Boolean Alg.~
+[Data type] - bool
+
+Description:
+boolean is a non-standard type allas for bool define by arduino
+That is one that can take only two possible values.Usually these values are depicted as "TRUE" or "FALSE". you can also see them as "ON" or "OFF" or "1" or "0".
+
+If Con.
+//Arduino
+This statements is used for comparism say:
+if (condition){
+ 	//Do something
+}
+else {
+	//Do something
+
+}
+
+Week 3:
+libraries:
+The Arduino environment can be extended through the use of libraries, just like most programming platforms. Libraries provide extra functionality for use in sketches, e.g: working with hardware or manipulating data.
+
+//Declaration
+#include<Servo.h>
+
+pulse width modulation
+PWM is a common technique used to vary the width of the pulses in a pulse-train. PWM has many apllications such as controlling servos and speed controllers, limiting the effective power of motors and LEDs.
+Syntax:
+analogWrite(pin,dutyCycle);
+where dutyCycle is a value from 0 - 255 and the pin usually noted with this sign (~) on the arduino are: 3, 5, 6, 9, 10, or 11
+
+classes:
+A class is simply a collection of functions and variables that are all kept together in one place. These functions and variable can be public, or private.
+class HBCUbot
+{
+	public:
+		HBCU(int pin);
+		void blink();
+	private:
+		int _pin;
+
+};
+
+Where is:
+ void blink()
+{
+	digitalWrite(pin, HIGH)
+	delay(250);
+	digitalWrite(pin, LOW)
+	delay(250);
+}
+
+range mapping:
+map() is an easy way to convert values read from the analog inputs into something more useful.
+In the case of DC motor speed control
+x =map(value, 0, 1023, 0, 255)
+In the case of Servo motor control
+y =map(value, 0, 1023, 0, 180)
+
+functions:
+Use for controlling the arduino board and performing computations.
+
+Digital I/O
+digitalRead(), digitalWrite(), pinMode()
+Analog I/O
+analogRead(), analogWrite()
+Advanced I/O
+noTone(), pulseIn(), tone()
+Time
+delay(), delayMicroseconds(), millis()
+Math
+abs(), map(), max(), min(), pow(), sq(), sqrt()
+Trig.
+sin(), cos(), tan()
+Communication
+Serial
+
+Week 4: 10/19/21
+strings
+[Data Type]
+Description:
+Text strings can be represented i two ways, you can use string data-type or make a string out of an array of type char.
+String object:
+String()
+String str1 = String('a');
+String str2 = String("This is a string");
+
+pointers:
+& (reference operator)
+* (dereference operator)
+Example:
+i = *p;
+int i = 5;
+int result = 0;
+p = &i
+return *p;
+
+Week 5: 10/26/21
+Building Robot with motors
+-Sonar
+-Switch
+-Wheels
+
+-Robot Controls and behaviors
